@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script src="js/vue.js" type="text/javascript" charset="utf-8"></script>
+
+	</head>
+	<body>
+		<div id="app">
+			输入国家代号：
+			<input type="text" v-model="num" name="" id="" value="" />
+			
+				<h2 v-for="gj in Contry">
+					<div v-if="num==gj.code">
+						国家名：{{gj.name}}<br>
+					    首都：{{gj.shoudu}}<br>
+						代号：{{gj.code}}<br>
+					</div>
+				</h2>
+			
+		</div>
+		<script type="text/javascript">
+			let v=new Vue({
+				el:'#app',
+				data:{
+					num:"",
+					Contry:[
+						{name:"中国",shoudu:"北京",code:"156"},
+						{name:"加拿大",shoudu:"北京",code:"124"},
+						{name:"比利时",shoudu:"北京",code:"56"},
+						{name:"西班牙",shoudu:"北京",code:"724"},
+						{name:"芬兰",shoudu:"北京",code:"246"}
+
+					]
+				}
+			})
+		</script>
+	</body>
+</html>
